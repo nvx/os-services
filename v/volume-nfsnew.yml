@@ -10,6 +10,7 @@ volume-nfsnew:
   volumes:
     - /run/docker/plugins:/run/docker/plugins:rw
     - /mnt/volumes/netshare/nfs:/mnt:shared
+    - /var/run/docker.sock:/var/run/docker.sock
   labels:
     io.rancher.os.scope: system
     io.rancher.os.after: docker
