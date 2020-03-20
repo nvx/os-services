@@ -1,4 +1,4 @@
-volume-nfs:
+volume-nfsnew:
   command: nfs --verbose --basedir=/mnt ${VOLUME_NFS_OPTIONS}
   image: nvxx/rancheros-volumenetshare
   pid: host
