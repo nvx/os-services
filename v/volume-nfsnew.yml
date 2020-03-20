@@ -1,5 +1,5 @@
 volume-nfsnew:
-  command: nfs --verbose --basedir=/mnt ${VOLUME_NFS_OPTIONS}
+  command: nfs --verbose --basedir=/mnt/volumes/netshare/nfs ${VOLUME_NFS_OPTIONS}
   image: nvxx/rancheros-volumenetshare
   pid: host
   ipc: host
@@ -9,7 +9,7 @@ volume-nfsnew:
   restart: always
   volumes:
     - /run/docker/plugins:/run/docker/plugins:rw
-    - /mnt/volumes/netshare/nfs:/mnt:shared
+    - /mnt/volumes/netshare/nfs:/mnt/volumes/netshare/nfs:shared
     - /var/run/docker.sock:/var/run/docker.sock
   labels:
     io.rancher.os.scope: system
